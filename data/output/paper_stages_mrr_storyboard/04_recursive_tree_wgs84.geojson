@@ -1,0 +1,140 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -35.07259620177116,
+              -6.417703945621531
+            ],
+            [
+              -35.072337768789666,
+              -6.417270100311495
+            ],
+            [
+              -35.072171393711315,
+              -6.417369275417534
+            ],
+            [
+              -35.0724298266559,
+              -6.41780312083925
+            ],
+            [
+              -35.07259620177116,
+              -6.417703945621531
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "group_id": 14,
+        "node_id": 1,
+        "parent_id": null,
+        "depth": 0,
+        "status": "split",
+        "polygon_count": 7,
+        "fill_ratio": 0.353038,
+        "weed_area_m2": 422.6644,
+        "rectangle_area_m2": 1197.2201,
+        "stage": "04_recursive_tree",
+        "stage_label": "Arvore recursiva do MRR",
+        "role": "trace_root",
+        "decision_note": "fill_ratio abaixo do limite, entao o nodo raiz foi dividido"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -35.07235892374265,
+              -6.417590607255609
+            ],
+            [
+              -35.07234831703324,
+              -6.4177362008402925
+            ],
+            [
+              -35.07256062353978,
+              -6.417751678369119
+            ],
+            [
+              -35.07257123018632,
+              -6.417606084799422
+            ],
+            [
+              -35.07235892374265,
+              -6.417590607255609
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "group_id": 14,
+        "node_id": 2,
+        "parent_id": 1,
+        "depth": 1,
+        "status": "leaf",
+        "polygon_count": 3,
+        "fill_ratio": 0.616864,
+        "weed_area_m2": 234.6286,
+        "rectangle_area_m2": 380.3569,
+        "stage": "04_recursive_tree",
+        "stage_label": "Arvore recursiva do MRR",
+        "role": "trace_child",
+        "decision_note": "fill_ratio suficiente para parar a recursao"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -35.07224607584127,
+              -6.417323674147374
+            ],
+            [
+              -35.072391476270326,
+              -6.41758688666611
+            ],
+            [
+              -35.072488687379234,
+              -6.417533149215751
+            ],
+            [
+              -35.07234328693322,
+              -6.417269936735277
+            ],
+            [
+              -35.07224607584127,
+              -6.417323674147374
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "group_id": 14,
+        "node_id": 3,
+        "parent_id": 1,
+        "depth": 1,
+        "status": "leaf",
+        "polygon_count": 4,
+        "fill_ratio": 0.459939,
+        "weed_area_m2": 188.0358,
+        "rectangle_area_m2": 408.8275,
+        "stage": "04_recursive_tree",
+        "stage_label": "Arvore recursiva do MRR",
+        "role": "trace_child",
+        "decision_note": "fill_ratio suficiente para parar a recursao"
+      }
+    }
+  ]
+}

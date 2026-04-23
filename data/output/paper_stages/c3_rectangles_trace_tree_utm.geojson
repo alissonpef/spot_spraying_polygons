@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32725"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              270758.51741755585,
+              9290157.567110823
+            ],
+            [
+              270786.9197906361,
+              9290205.67254748
+            ],
+            [
+              270805.3741233164,
+              9290194.776755258
+            ],
+            [
+              270776.97175023606,
+              9290146.671318602
+            ],
+            [
+              270758.51741755585,
+              9290157.567110823
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "group_id": 14,
+        "node_id": 1,
+        "parent_id": null,
+        "depth": 0,
+        "status": "split",
+        "polygon_count": 7,
+        "fill_ratio": 0.353038,
+        "weed_area_m2": 422.6644,
+        "rectangle_area_m2": 1197.2201,
+        "stage": "c_trace"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              270784.7223123367,
+              9290170.210227644
+            ],
+            [
+              270785.961118243,
+              9290154.110150788
+            ],
+            [
+              270762.4756251862,
+              9290152.303080667
+            ],
+            [
+              270761.2368192799,
+              9290168.403157523
+            ],
+            [
+              270784.7223123367,
+              9290170.210227644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "group_id": 14,
+        "node_id": 2,
+        "parent_id": 1,
+        "depth": 1,
+        "status": "leaf",
+        "polygon_count": 3,
+        "fill_ratio": 0.616864,
+        "weed_area_m2": 234.6286,
+        "rectangle_area_m2": 380.3569,
+        "stage": "c_trace"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              270797.08989365003,
+              9290199.787515715
+            ],
+            [
+              270781.1186018394,
+              9290170.607211415
+            ],
+            [
+              270770.3378242648,
+              9290176.507867653
+            ],
+            [
+              270786.3091160754,
+              9290205.688171953
+            ],
+            [
+              270797.08989365003,
+              9290199.787515715
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "group_id": 14,
+        "node_id": 3,
+        "parent_id": 1,
+        "depth": 1,
+        "status": "leaf",
+        "polygon_count": 4,
+        "fill_ratio": 0.459939,
+        "weed_area_m2": 188.0358,
+        "rectangle_area_m2": 408.8275,
+        "stage": "c_trace"
+      }
+    }
+  ]
+}

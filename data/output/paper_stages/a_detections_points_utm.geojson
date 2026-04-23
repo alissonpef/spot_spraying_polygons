@@ -1,0 +1,2381 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32725"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271114.22490347194,
+          9290938.911409613
+        ]
+      },
+      "properties": {
+        "weed_id": 1,
+        "source_area_m2": 234.1433,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271134.7208453528,
+          9290949.392224442
+        ]
+      },
+      "properties": {
+        "weed_id": 2,
+        "source_area_m2": 82.8051,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271316.3485374118,
+          9291100.182235127
+        ]
+      },
+      "properties": {
+        "weed_id": 3,
+        "source_area_m2": 129.1039,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270994.28183012974,
+          9290908.717705064
+        ]
+      },
+      "properties": {
+        "weed_id": 4,
+        "source_area_m2": 3.4762,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270996.7313523277,
+          9290869.831680516
+        ]
+      },
+      "properties": {
+        "weed_id": 5,
+        "source_area_m2": 14.4435,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270925.59948047815,
+          9290822.660118142
+        ]
+      },
+      "properties": {
+        "weed_id": 6,
+        "source_area_m2": 14.217,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270923.65261867957,
+          9290816.357209265
+        ]
+      },
+      "properties": {
+        "weed_id": 7,
+        "source_area_m2": 7.8705,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270902.6854868515,
+          9290820.659617743
+        ]
+      },
+      "properties": {
+        "weed_id": 8,
+        "source_area_m2": 25.9432,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270927.72371192684,
+          9290789.754113268
+        ]
+      },
+      "properties": {
+        "weed_id": 9,
+        "source_area_m2": 313.8271,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270916.9392072432,
+          9290803.2651742
+        ]
+      },
+      "properties": {
+        "weed_id": 10,
+        "source_area_m2": 47.8776,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270924.03054078214,
+          9290777.288833225
+        ]
+      },
+      "properties": {
+        "weed_id": 11,
+        "source_area_m2": 63.4349,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270930.2039672179,
+          9290770.62990595
+        ]
+      },
+      "properties": {
+        "weed_id": 12,
+        "source_area_m2": 14.419,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270907.50264942704,
+          9290763.382315723
+        ]
+      },
+      "properties": {
+        "weed_id": 13,
+        "source_area_m2": 24.7803,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270900.48202829424,
+          9290781.143983588
+        ]
+      },
+      "properties": {
+        "weed_id": 14,
+        "source_area_m2": 15.2819,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270901.46088419744,
+          9290771.383991897
+        ]
+      },
+      "properties": {
+        "weed_id": 15,
+        "source_area_m2": 24.5416,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270910.23581216676,
+          9290740.155936584
+        ]
+      },
+      "properties": {
+        "weed_id": 16,
+        "source_area_m2": 5.196,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270907.4943316119,
+          9290707.57840923
+        ]
+      },
+      "properties": {
+        "weed_id": 17,
+        "source_area_m2": 5.4102,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270914.7770403145,
+          9290582.602497239
+        ]
+      },
+      "properties": {
+        "weed_id": 18,
+        "source_area_m2": 1774.6181,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270872.3202204056,
+          9290632.42983143
+        ]
+      },
+      "properties": {
+        "weed_id": 19,
+        "source_area_m2": 292.914,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270857.4967156424,
+          9290612.021287704
+        ]
+      },
+      "properties": {
+        "weed_id": 20,
+        "source_area_m2": 120.6944,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270952.35664615076,
+          9290568.309943067
+        ]
+      },
+      "properties": {
+        "weed_id": 21,
+        "source_area_m2": 6.2364,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270930.3756194002,
+          9290515.069874909
+        ]
+      },
+      "properties": {
+        "weed_id": 22,
+        "source_area_m2": 81.495,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270863.78556712606,
+          9290482.6151919
+        ]
+      },
+      "properties": {
+        "weed_id": 23,
+        "source_area_m2": 6.8361,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270791.8661779821,
+          9290498.691481628
+        ]
+      },
+      "properties": {
+        "weed_id": 24,
+        "source_area_m2": 91.5015,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271019.50304862106,
+          9290729.424282977
+        ]
+      },
+      "properties": {
+        "weed_id": 25,
+        "source_area_m2": 211.7554,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270991.5613654189,
+          9290758.072652815
+        ]
+      },
+      "properties": {
+        "weed_id": 26,
+        "source_area_m2": 8.1459,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271023.10139607446,
+          9290884.058334846
+        ]
+      },
+      "properties": {
+        "weed_id": 27,
+        "source_area_m2": 870.0172,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270974.3452800065,
+          9290843.592721581
+        ]
+      },
+      "properties": {
+        "weed_id": 28,
+        "source_area_m2": 102.977,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270354.4947856837,
+          9289948.091677286
+        ]
+      },
+      "properties": {
+        "weed_id": 29,
+        "source_area_m2": 6.7015,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270381.68892289826,
+          9289948.067753859
+        ]
+      },
+      "properties": {
+        "weed_id": 30,
+        "source_area_m2": 0.8384,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270388.2235336673,
+          9290023.0402875
+        ]
+      },
+      "properties": {
+        "weed_id": 31,
+        "source_area_m2": 2.0808,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270353.0638988954,
+          9290012.402014852
+        ]
+      },
+      "properties": {
+        "weed_id": 32,
+        "source_area_m2": 3.9168,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270333.8891784475,
+          9289998.584728636
+        ]
+      },
+      "properties": {
+        "weed_id": 33,
+        "source_area_m2": 2.5521,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270319.1242289659,
+          9289997.440639807
+        ]
+      },
+      "properties": {
+        "weed_id": 34,
+        "source_area_m2": 2.1604,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270317.60538836377,
+          9289914.766022382
+        ]
+      },
+      "properties": {
+        "weed_id": 35,
+        "source_area_m2": 2.0808,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270227.2940030348,
+          9289859.91742099
+        ]
+      },
+      "properties": {
+        "weed_id": 36,
+        "source_area_m2": 40.6739,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270132.75489626033,
+          9289832.926703662
+        ]
+      },
+      "properties": {
+        "weed_id": 37,
+        "source_area_m2": 28.4828,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270127.61190137285,
+          9289868.982488733
+        ]
+      },
+      "properties": {
+        "weed_id": 38,
+        "source_area_m2": 171.9434,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270909.47877577407,
+          9290070.17896141
+        ]
+      },
+      "properties": {
+        "weed_id": 39,
+        "source_area_m2": 253.8775,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270859.02311000053,
+          9290080.30095262
+        ]
+      },
+      "properties": {
+        "weed_id": 40,
+        "source_area_m2": 3.4272,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270858.36454569054,
+          9290063.641806189
+        ]
+      },
+      "properties": {
+        "weed_id": 41,
+        "source_area_m2": 45.8819,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270935.699978673,
+          9290050.958289705
+        ]
+      },
+      "properties": {
+        "weed_id": 42,
+        "source_area_m2": 19.7738,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270957.1083925013,
+          9290093.338188598
+        ]
+      },
+      "properties": {
+        "weed_id": 43,
+        "source_area_m2": 18.3601,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271002.44388346147,
+          9290107.003904797
+        ]
+      },
+      "properties": {
+        "weed_id": 44,
+        "source_area_m2": 170.1063,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270948.7702457945,
+          9290117.51395006
+        ]
+      },
+      "properties": {
+        "weed_id": 45,
+        "source_area_m2": 824.2468,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270977.80284189095,
+          9290131.546195813
+        ]
+      },
+      "properties": {
+        "weed_id": 46,
+        "source_area_m2": 131.8134,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270964.62598621455,
+          9290149.67393864
+        ]
+      },
+      "properties": {
+        "weed_id": 47,
+        "source_area_m2": 63.9667,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270992.7455385765,
+          9290141.563493684
+        ]
+      },
+      "properties": {
+        "weed_id": 48,
+        "source_area_m2": 238.4979,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270993.0146927458,
+          9290152.942102337
+        ]
+      },
+      "properties": {
+        "weed_id": 49,
+        "source_area_m2": 42.2405,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270902.6898424552,
+          9290155.849643119
+        ]
+      },
+      "properties": {
+        "weed_id": 50,
+        "source_area_m2": 228.804,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270976.3030283458,
+          9290176.001602087
+        ]
+      },
+      "properties": {
+        "weed_id": 51,
+        "source_area_m2": 9.1739,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270968.23314561514,
+          9290174.803981315
+        ]
+      },
+      "properties": {
+        "weed_id": 52,
+        "source_area_m2": 9.8043,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271030.04542219266,
+          9290188.238596018
+        ]
+      },
+      "properties": {
+        "weed_id": 53,
+        "source_area_m2": 37.4914,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270994.0916331552,
+          9290202.614934342
+        ]
+      },
+      "properties": {
+        "weed_id": 54,
+        "source_area_m2": 64.3523,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271082.3879356176,
+          9290230.757769525
+        ]
+      },
+      "properties": {
+        "weed_id": 55,
+        "source_area_m2": 10.7223,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271150.16186774895,
+          9290288.294345556
+        ]
+      },
+      "properties": {
+        "weed_id": 56,
+        "source_area_m2": 10.7407,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271174.86382421316,
+          9290289.55875444
+        ]
+      },
+      "properties": {
+        "weed_id": 57,
+        "source_area_m2": 3.3905,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271208.80738821276,
+          9290331.18580303
+        ]
+      },
+      "properties": {
+        "weed_id": 58,
+        "source_area_m2": 11.1813,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271209.0224675349,
+          9290324.880346678
+        ]
+      },
+      "properties": {
+        "weed_id": 59,
+        "source_area_m2": 6.5423,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271225.45324425213,
+          9290343.864077708
+        ]
+      },
+      "properties": {
+        "weed_id": 60,
+        "source_area_m2": 24.5659,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270953.3334371278,
+          9290303.515851324
+        ]
+      },
+      "properties": {
+        "weed_id": 61,
+        "source_area_m2": 13.813,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270964.2944083015,
+          9290303.082145633
+        ]
+      },
+      "properties": {
+        "weed_id": 62,
+        "source_area_m2": 1.0894,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271271.66489290533,
+          9290318.956892021
+        ]
+      },
+      "properties": {
+        "weed_id": 63,
+        "source_area_m2": 931.3044,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271275.6842027592,
+          9290287.378159817
+        ]
+      },
+      "properties": {
+        "weed_id": 64,
+        "source_area_m2": 283.0516,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271274.92736202903,
+          9290271.952035258
+        ]
+      },
+      "properties": {
+        "weed_id": 65,
+        "source_area_m2": 41.0226,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271357.198560239,
+          9290361.988312315
+        ]
+      },
+      "properties": {
+        "weed_id": 66,
+        "source_area_m2": 98.0307,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271434.6390535467,
+          9290786.318893004
+        ]
+      },
+      "properties": {
+        "weed_id": 67,
+        "source_area_m2": 12.54,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271637.2682291138,
+          9290698.771625802
+        ]
+      },
+      "properties": {
+        "weed_id": 68,
+        "source_area_m2": 36.9774,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271378.0839022411,
+          9290340.968835548
+        ]
+      },
+      "properties": {
+        "weed_id": 69,
+        "source_area_m2": 4.1065,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271428.95755538356,
+          9290421.618513923
+        ]
+      },
+      "properties": {
+        "weed_id": 70,
+        "source_area_m2": 9.535,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271440.67078490654,
+          9290411.199301695
+        ]
+      },
+      "properties": {
+        "weed_id": 71,
+        "source_area_m2": 6.5056,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271392.6042961926,
+          9290705.112011312
+        ]
+      },
+      "properties": {
+        "weed_id": 72,
+        "source_area_m2": 14.1129,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271563.9018657128,
+          9290886.099880703
+        ]
+      },
+      "properties": {
+        "weed_id": 73,
+        "source_area_m2": 156.8453,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271613.0336344921,
+          9290873.514491517
+        ]
+      },
+      "properties": {
+        "weed_id": 74,
+        "source_area_m2": 207.5439,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271594.4334049401,
+          9290870.853957606
+        ]
+      },
+      "properties": {
+        "weed_id": 75,
+        "source_area_m2": 41.9959,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271598.9718505715,
+          9290901.727827506
+        ]
+      },
+      "properties": {
+        "weed_id": 76,
+        "source_area_m2": 77.78,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271573.540834265,
+          9290916.915074158
+        ]
+      },
+      "properties": {
+        "weed_id": 77,
+        "source_area_m2": 58.0734,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271542.9300132564,
+          9290918.28757845
+        ]
+      },
+      "properties": {
+        "weed_id": 78,
+        "source_area_m2": 107.4748,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271554.98387841927,
+          9290909.51862608
+        ]
+      },
+      "properties": {
+        "weed_id": 79,
+        "source_area_m2": 6.2119,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271572.0616795019,
+          9290940.593641974
+        ]
+      },
+      "properties": {
+        "weed_id": 80,
+        "source_area_m2": 72.2414,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271594.85043294285,
+          9290937.218452947
+        ]
+      },
+      "properties": {
+        "weed_id": 81,
+        "source_area_m2": 11.0651,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271592.3565718131,
+          9290952.433533156
+        ]
+      },
+      "properties": {
+        "weed_id": 82,
+        "source_area_m2": 47.3633,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271600.16679250303,
+          9290949.7573638
+        ]
+      },
+      "properties": {
+        "weed_id": 83,
+        "source_area_m2": 9.2046,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271532.5508835635,
+          9290962.764805814
+        ]
+      },
+      "properties": {
+        "weed_id": 84,
+        "source_area_m2": 353.6064,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271536.000045428,
+          9290943.612480137
+        ]
+      },
+      "properties": {
+        "weed_id": 85,
+        "source_area_m2": 4.6941,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271576.49429522105,
+          9291032.995055888
+        ]
+      },
+      "properties": {
+        "weed_id": 86,
+        "source_area_m2": 19.8046,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271586.0747217773,
+          9291028.351834118
+        ]
+      },
+      "properties": {
+        "weed_id": 87,
+        "source_area_m2": 7.1177,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271465.3080568606,
+          9290931.24281862
+        ]
+      },
+      "properties": {
+        "weed_id": 88,
+        "source_area_m2": 32.0325,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271468.63245910144,
+          9290926.144072836
+        ]
+      },
+      "properties": {
+        "weed_id": 89,
+        "source_area_m2": 1.8544,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271458.5226489331,
+          9290912.454695899
+        ]
+      },
+      "properties": {
+        "weed_id": 90,
+        "source_area_m2": 5.655,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271460.98553694866,
+          9290915.906264156
+        ]
+      },
+      "properties": {
+        "weed_id": 91,
+        "source_area_m2": 4.027,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271500.5674073312,
+          9290907.011649083
+        ]
+      },
+      "properties": {
+        "weed_id": 92,
+        "source_area_m2": 204.9249,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271504.43528217246,
+          9290871.47987229
+        ]
+      },
+      "properties": {
+        "weed_id": 93,
+        "source_area_m2": 67.584,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271474.2486662143,
+          9290836.455650479
+        ]
+      },
+      "properties": {
+        "weed_id": 94,
+        "source_area_m2": 52.9938,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271584.42774132395,
+          9290802.412634179
+        ]
+      },
+      "properties": {
+        "weed_id": 95,
+        "source_area_m2": 24.3701,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271599.34605370887,
+          9290800.408421073
+        ]
+      },
+      "properties": {
+        "weed_id": 96,
+        "source_area_m2": 5.2449,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271471.1671881699,
+          9290962.312134925
+        ]
+      },
+      "properties": {
+        "weed_id": 97,
+        "source_area_m2": 15.0799,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271478.13060152874,
+          9290955.402401626
+        ]
+      },
+      "properties": {
+        "weed_id": 98,
+        "source_area_m2": 30.3985,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271463.7509792065,
+          9290970.144023048
+        ]
+      },
+      "properties": {
+        "weed_id": 99,
+        "source_area_m2": 30.5576,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          271405.99852927605,
+          9290675.07516943
+        ]
+      },
+      "properties": {
+        "weed_id": 100,
+        "source_area_m2": 4.1127,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270854.1731397105,
+          9290216.063548764
+        ]
+      },
+      "properties": {
+        "weed_id": 101,
+        "source_area_m2": 27.9075,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270848.9134749416,
+          9290222.576353533
+        ]
+      },
+      "properties": {
+        "weed_id": 102,
+        "source_area_m2": 22.6871,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270840.9739119888,
+          9290226.906153008
+        ]
+      },
+      "properties": {
+        "weed_id": 103,
+        "source_area_m2": 18.4581,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270815.3157444473,
+          9290216.544748073
+        ]
+      },
+      "properties": {
+        "weed_id": 104,
+        "source_area_m2": 525.7253,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270829.1515444671,
+          9290207.64773369
+        ]
+      },
+      "properties": {
+        "weed_id": 105,
+        "source_area_m2": 5.4591,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270823.3439052971,
+          9290197.319084661
+        ]
+      },
+      "properties": {
+        "weed_id": 106,
+        "source_area_m2": 75.2767,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270834.13541315205,
+          9290196.030279474
+        ]
+      },
+      "properties": {
+        "weed_id": 107,
+        "source_area_m2": 16.9709,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270809.26832798304,
+          9290195.65410604
+        ]
+      },
+      "properties": {
+        "weed_id": 108,
+        "source_area_m2": 1.12,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270788.8810510017,
+          9290195.09852351
+        ]
+      },
+      "properties": {
+        "weed_id": 109,
+        "source_area_m2": 52.5101,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270780.6848904847,
+          9290189.843597379
+        ]
+      },
+      "properties": {
+        "weed_id": 110,
+        "source_area_m2": 11.9402,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270779.8138609038,
+          9290176.682625487
+        ]
+      },
+      "properties": {
+        "weed_id": 111,
+        "source_area_m2": 28.4889,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270784.241717304,
+          9290181.606339546
+        ]
+      },
+      "properties": {
+        "weed_id": 112,
+        "source_area_m2": 1.0771,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270782.1588458111,
+          9290163.538993424
+        ]
+      },
+      "properties": {
+        "weed_id": 113,
+        "source_area_m2": 15.649,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270776.5972687318,
+          9290165.469144331
+        ]
+      },
+      "properties": {
+        "weed_id": 114,
+        "source_area_m2": 15.2451,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270768.4881590252,
+          9290160.365909282
+        ]
+      },
+      "properties": {
+        "weed_id": 115,
+        "source_area_m2": 117.9518,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270814.3567414138,
+          9290181.09869382
+        ]
+      },
+      "properties": {
+        "weed_id": 116,
+        "source_area_m2": 298.371,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270833.0895420508,
+          9290244.179078637
+        ]
+      },
+      "properties": {
+        "weed_id": 117,
+        "source_area_m2": 14.0517,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270826.76564883825,
+          9290234.321951872
+        ]
+      },
+      "properties": {
+        "weed_id": 118,
+        "source_area_m2": 4.9511,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270721.7319625977,
+          9290234.001356537
+        ]
+      },
+      "properties": {
+        "weed_id": 119,
+        "source_area_m2": 4.3514,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270725.45340707205,
+          9290265.348396854
+        ]
+      },
+      "properties": {
+        "weed_id": 120,
+        "source_area_m2": 4.8043,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270710.59987286763,
+          9290283.719262335
+        ]
+      },
+      "properties": {
+        "weed_id": 121,
+        "source_area_m2": 3.8679,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270825.09335212345,
+          9290278.669036716
+        ]
+      },
+      "properties": {
+        "weed_id": 122,
+        "source_area_m2": 10.6734,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270865.20259174245,
+          9290300.258895021
+        ]
+      },
+      "properties": {
+        "weed_id": 123,
+        "source_area_m2": 33.0667,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270830.1114458876,
+          9290381.573125498
+        ]
+      },
+      "properties": {
+        "weed_id": 124,
+        "source_area_m2": 1.8666,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270823.1762936774,
+          9290383.15483233
+        ]
+      },
+      "properties": {
+        "weed_id": 125,
+        "source_area_m2": 13.8436,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270780.46528913616,
+          9290391.27151022
+        ]
+      },
+      "properties": {
+        "weed_id": 126,
+        "source_area_m2": 1.9829,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270748.0695345619,
+          9290355.694898091
+        ]
+      },
+      "properties": {
+        "weed_id": 127,
+        "source_area_m2": 2.8275,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270820.99995490606,
+          9290416.013380649
+        ]
+      },
+      "properties": {
+        "weed_id": 128,
+        "source_area_m2": 9.2536,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270831.02045775147,
+          9290429.893024165
+        ]
+      },
+      "properties": {
+        "weed_id": 129,
+        "source_area_m2": 3.005,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270797.73132330267,
+          9290427.382022671
+        ]
+      },
+      "properties": {
+        "weed_id": 130,
+        "source_area_m2": 2.7173,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270777.63055401156,
+          9290430.066570591
+        ]
+      },
+      "properties": {
+        "weed_id": 131,
+        "source_area_m2": 3.3966,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270863.859045019,
+          9290482.35467915
+        ]
+      },
+      "properties": {
+        "weed_id": 132,
+        "source_area_m2": 6.3037,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270930.67302522936,
+          9290514.854251428
+        ]
+      },
+      "properties": {
+        "weed_id": 133,
+        "source_area_m2": 63.1837,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270885.9125098631,
+          9290541.389786297
+        ]
+      },
+      "properties": {
+        "weed_id": 134,
+        "source_area_m2": 20.2514,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270843.37749213405,
+          9290531.811770331
+        ]
+      },
+      "properties": {
+        "weed_id": 135,
+        "source_area_m2": 163.1983,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270792.5850959734,
+          9290501.030224059
+        ]
+      },
+      "properties": {
+        "weed_id": 136,
+        "source_area_m2": 58.5937,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270785.1552362581,
+          9290469.086560298
+        ]
+      },
+      "properties": {
+        "weed_id": 137,
+        "source_area_m2": 2.5337,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270714.6601871839,
+          9290500.191746328
+        ]
+      },
+      "properties": {
+        "weed_id": 138,
+        "source_area_m2": 24.5293,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270720.2697130375,
+          9290504.860985976
+        ]
+      },
+      "properties": {
+        "weed_id": 139,
+        "source_area_m2": 36.0045,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270669.5812780747,
+          9290293.53469103
+        ]
+      },
+      "properties": {
+        "weed_id": 140,
+        "source_area_m2": 463.7672,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270598.06195924734,
+          9289900.103662422
+        ]
+      },
+      "properties": {
+        "weed_id": 141,
+        "source_area_m2": 904.8908,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270682.48066522524,
+          9289941.134881312
+        ]
+      },
+      "properties": {
+        "weed_id": 142,
+        "source_area_m2": 17.8522,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270692.21116522973,
+          9290155.030268865
+        ]
+      },
+      "properties": {
+        "weed_id": 143,
+        "source_area_m2": 11.4506,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270848.2531995285,
+          9290285.150581207
+        ]
+      },
+      "properties": {
+        "weed_id": 144,
+        "source_area_m2": 417.523,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270804.99041124684,
+          9290322.576570222
+        ]
+      },
+      "properties": {
+        "weed_id": 145,
+        "source_area_m2": 8.1458,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270782.58512535016,
+          9290316.932091236
+        ]
+      },
+      "properties": {
+        "weed_id": 146,
+        "source_area_m2": 3.4028,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270911.11172653164,
+          9290401.7774859
+        ]
+      },
+      "properties": {
+        "weed_id": 147,
+        "source_area_m2": 2.3134,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270910.10382647987,
+          9290413.176999787
+        ]
+      },
+      "properties": {
+        "weed_id": 148,
+        "source_area_m2": 3.5496,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270919.65278790216,
+          9290426.638944184
+        ]
+      },
+      "properties": {
+        "weed_id": 149,
+        "source_area_m2": 4.945,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270875.511675648,
+          9290426.065083694
+        ]
+      },
+      "properties": {
+        "weed_id": 150,
+        "source_area_m2": 2.852,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270880.0029864587,
+          9290419.865171228
+        ]
+      },
+      "properties": {
+        "weed_id": 151,
+        "source_area_m2": 3.6353,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270847.307640764,
+          9290425.805201316
+        ]
+      },
+      "properties": {
+        "weed_id": 152,
+        "source_area_m2": 4.1861,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270854.27151690004,
+          9290418.371633919
+        ]
+      },
+      "properties": {
+        "weed_id": 153,
+        "source_area_m2": 9.6636,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270907.5444333791,
+          9290353.068880647
+        ]
+      },
+      "properties": {
+        "weed_id": 154,
+        "source_area_m2": 6.2731,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270884.0013604143,
+          9290329.726150226
+        ]
+      },
+      "properties": {
+        "weed_id": 155,
+        "source_area_m2": 4.7492,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270868.86106606136,
+          9290254.576600142
+        ]
+      },
+      "properties": {
+        "weed_id": 156,
+        "source_area_m2": 106.2626,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270844.0377727371,
+          9290258.784870047
+        ]
+      },
+      "properties": {
+        "weed_id": 157,
+        "source_area_m2": 42.9689,
+        "stage": "a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          270782.0814567971,
+          9290218.217660682
+        ]
+      },
+      "properties": {
+        "weed_id": 158,
+        "source_area_m2": 4.7063,
+        "stage": "a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "source_folder": "/home/alisson/Global-Drones/SpotSprayingPolygons/Catacao/data/paper_stages",
+  "working_crs": "EPSG:32725",
+  "default_view_crs": "EPSG:4326",
+  "recommended_layers": "wgs84",
+  "selected_cluster": {
+    "group_id": 14,
+    "fill_ratio": 0.3530382108774023,
+    "weed_area_m2": 422.6644377083267,
+    "mrr_area_m2": 1197.220087474053,
+    "rectangles_final_count": 2,
+    "trace_nodes_count": 3
+  },
+  "layers_utm": {
+    "step_01_cluster_input": "01_cluster_input_utm.geojson",
+    "step_02_union_and_mrr": "02_union_and_mrr_utm.geojson",
+    "step_03_candidate_axes": "03_candidate_axes_utm.geojson",
+    "step_04_recursive_tree": "04_recursive_tree_utm.geojson",
+    "step_05_final_rectangles": "05_final_rectangles_utm.geojson"
+  },
+  "layers_wgs84": {
+    "step_01_cluster_input": "01_cluster_input_wgs84.geojson",
+    "step_02_union_and_mrr": "02_union_and_mrr_wgs84.geojson",
+    "step_03_candidate_axes": "03_candidate_axes_wgs84.geojson",
+    "step_04_recursive_tree": "04_recursive_tree_wgs84.geojson",
+    "step_05_final_rectangles": "05_final_rectangles_wgs84.geojson"
+  },
+  "story": [
+    {
+      "step": 1,
+      "title": "Entrada do cluster selecionado",
+      "file_utm": "01_cluster_input_utm.geojson",
+      "file_wgs84": "01_cluster_input_wgs84.geojson",
+      "focus": "Mostra somente os 7 poligonos que alimentam o MRR do cluster escolhido."
+    },
+    {
+      "step": 2,
+      "title": "Uniao dos buffers e envelope MRR",
+      "file_utm": "02_union_and_mrr_utm.geojson",
+      "file_wgs84": "02_union_and_mrr_wgs84.geojson",
+      "focus": "Mostra a uniao das manchas e o retangulo girado minimo que as envolve."
+    },
+    {
+      "step": 3,
+      "title": "Eixos candidatos de corte",
+      "file_utm": "03_candidate_axes_utm.geojson",
+      "file_wgs84": "03_candidate_axes_wgs84.geojson",
+      "focus": "Mostra os dois eixos que o algoritmo avalia para tentar dividir o envelope."
+    },
+    {
+      "step": 4,
+      "title": "Arvore recursiva do MRR",
+      "file_utm": "04_recursive_tree_utm.geojson",
+      "file_wgs84": "04_recursive_tree_wgs84.geojson",
+      "focus": "Mostra o nodo raiz e os dois retangulos filhos que encerram a recursao."
+    },
+    {
+      "step": 5,
+      "title": "Saida final do MRR",
+      "file_utm": "05_final_rectangles_utm.geojson",
+      "file_wgs84": "05_final_rectangles_wgs84.geojson",
+      "focus": "Mostra apenas os retangulos finais usados na saida final."
+    }
+  ],
+  "style_hints": {
+    "input_polygon": "fill claro e borda fina",
+    "union_component": "cinza claro com transparencia",
+    "mrr_envelope": "contorno laranja mais forte",
+    "candidate_axis": "linha tracejada azul",
+    "trace_root": "contorno laranja escuro",
+    "trace_child": "contorno verde",
+    "final_rectangle": "preenchimento verde suave"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -35.07262778050682,
+            -6.41794619722476
+          ],
+          [
+            -35.07213981530576,
+            -6.417127023700227
+          ]
+        ]
+      },
+      "properties": {
+        "stage": "03_candidate_axes",
+        "stage_label": "Eixos candidatos de corte",
+        "role": "candidate_axis",
+        "axis_index": 1,
+        "axis_angle_deg": 59.442,
+        "axis_length_m": 105.4814
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -35.07279324198963,
+            -6.417292543136132
+          ],
+          [
+            -35.07197435290664,
+            -6.417780677832478
+          ]
+        ]
+      },
+      "properties": {
+        "stage": "03_candidate_axes",
+        "stage_label": "Eixos candidatos de corte",
+        "role": "candidate_axis",
+        "axis_index": 2,
+        "axis_angle_deg": -30.558,
+        "axis_length_m": 105.4814
+      }
+    }
+  ]
+}
