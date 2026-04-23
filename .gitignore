@@ -1,0 +1,41 @@
+# Byte-compiled / distribution
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.cache/
+pip-wheel-metadata/
+htmlcov/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Environment
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+.venv/
+data/output/
+__pycache__/
+
