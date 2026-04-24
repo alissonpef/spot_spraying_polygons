@@ -6,7 +6,12 @@ from collections.abc import Sequence
 from shapely.geometry import MultiPoint, Polygon
 from shapely.ops import triangulate, unary_union
 
-from src.geo.geometry import dissolve_polygons, ensure_polygonal, make_valid_if_needed
+from src.geo.geometry import (
+    dissolve_polygons,
+    ensure_polygonal,
+    make_valid_if_needed,
+    to_polygon_list,
+)
 
 
 def ring_signed_area(coords: Sequence[tuple[float, float]]) -> float:
@@ -121,9 +126,14 @@ def alpha_shape_from_polygons(
     *,
     fix_invalid: bool,
 ) -> Polygon:
-    points = collect_polygon_points(polygons)
+    dissolved = dissolve_polygons(polygons, fix_invalid=fix_invalid)
+    dissolved_polygons = to_polygon_list(dissolved)
+    if not dissolved_polygons:
+        return Polygon()
+
+    points = collect_polygon_points(dissolved_polygons)
     if len(points) < 4:
-        return ensure_polygonal(dissolve_polygons(polygons, fix_invalid=fix_invalid))
+        return ensure_polygonal(dissolved)
 
     multipoint = MultiPoint(points)
     if max_circumradius_m <= 0:
@@ -142,4 +152,9 @@ def alpha_shape_from_polygons(
         return ensure_polygonal(make_valid_if_needed(hull, fix_invalid=fix_invalid))
 
     alpha_geom = make_valid_if_needed(unary_union(kept_triangles), fix_invalid=fix_invalid)
+    
+    # Ensure the alpha shape always covers the original polygons
+    alpha_geom = unary_union([alpha_geom, dissolved])
+    alpha_geom = make_valid_if_needed(alpha_geom, fix_invalid=fix_invalid)
+    
     return ensure_polygonal(alpha_geom)
