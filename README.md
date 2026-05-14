@@ -1,11 +1,5 @@
 <a id="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stars][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 # Spot Spraying Polygons
 
 Automatic generation of spot spraying polygons from georeferenced weed detections, field boundaries, and obstacles.
@@ -25,11 +19,7 @@ The project combines geospatial processing, clustering algorithms, and coverage 
   - [Usage](#usage)
     - [CLI](#cli)
     - [UI](#ui)
-  - [Contributors](#contributors)
   - [Project Structure](#project-structure)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
   - [Acknowledgements](#acknowledgements)
 
 ## About the Project
@@ -127,40 +117,11 @@ streamlit run ui/app.py
 
 The interface opens with the sample files by default and allows manual GeoJSON uploads. From there you can adjust parameters, inspect the map, remove weeds or generated polygons, and download the final result.
 
-## Contributors
-
-<a href="https://github.com/alissonpef/Spot-Spraying-Polygons/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=alissonpef/Spot-Spraying-Polygons" alt="Top contributors" />
-</a>
-
-The collaborators above are automatically updated by GitHub and contrib.rocks.
-
 ## Project Structure
 
 - `src/` - processing engine, geometry, projection, algorithms, CLI, and pipeline.
 - `ui/` - Streamlit interface and visual components.
 - `data/input/` - sample inputs.
-
-## Contributing
-
-Contributions are welcome. If you want to help:
-
-1. Fork the repository.
-2. Create a branch for your change.
-3. Keep commits small and focused.
-4. Open a pull request describing what changed.
-
-If the change is larger, open an issue first so we can align on scope.
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE.txt](LICENSE.txt) for the full text.
-
-## Contact
-
-Alisson Pereira Ferreira - alissonpef@gmail.com
-
-Project: https://github.com/alissonpef/Spot-Spraying-Polygons
 
 ## Acknowledgements
 
