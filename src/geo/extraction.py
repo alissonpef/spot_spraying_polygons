@@ -63,7 +63,9 @@ def transform_polygons(polygons: Sequence[Polygon], transformer: Transformer) ->
     transformed: list[Polygon] = []
     for polygon in polygons:
         exterior = [transformer.transform(x, y) for x, y in polygon.exterior.coords]
-        interiors = [[transformer.transform(x, y) for x, y in ring.coords] for ring in polygon.interiors]
+        interiors = [
+            [transformer.transform(x, y) for x, y in ring.coords] for ring in polygon.interiors
+        ]
         transformed_polygon = Polygon(exterior, interiors)
         if transformed_polygon.is_empty or transformed_polygon.area <= 0:
             continue

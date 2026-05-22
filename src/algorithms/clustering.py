@@ -57,7 +57,9 @@ def group_nearby_polygons(
 
         best_region_index = max(
             candidate_indices,
-            key=lambda region_index: expanded_polygon.intersection(merged_regions[region_index]).area,
+            key=lambda region_index: (
+                expanded_polygon.intersection(merged_regions[region_index]).area
+            ),
         )
         groups[best_region_index].append(flat[index])
 

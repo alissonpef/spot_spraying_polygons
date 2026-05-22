@@ -1,3 +1,3 @@
-from src.pipeline.engine import generate_catacao_per_talhao
+from src.pipeline.engine import generate_spraying_per_field
 
-__all__ = ["generate_catacao_per_talhao"]
+__all__ = ["generate_spraying_per_field"]

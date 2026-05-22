@@ -80,22 +80,24 @@ def make_valid_if_needed(
         ("envelope", lambda: geom.envelope),
     ]
     if fallback_buffer_distance > 0:
-        strategies.append(("centroid_buffer", lambda: geom.centroid.buffer(fallback_buffer_distance)))
+        strategies.append(
+            ("centroid_buffer", lambda: geom.centroid.buffer(fallback_buffer_distance))
+        )
 
     for strategy_name, strategy in strategies:
         try:
             fixed = strategy()
         except (GEOSException, TopologicalError, TypeError, ValueError) as exc:
-            logger.debug("Estratégia %s falhou: %s", strategy_name, exc)
+            logger.debug("Strategy %s failed: %s", strategy_name, exc)
             continue
 
         polygonal = ensure_polygonal(fixed)
         if polygonal and polygonal.is_valid:
-            logger.debug("Geometria inválida corrigida com estratégia: %s", strategy_name)
+            logger.debug("Invalid geometry repaired using strategy: %s", strategy_name)
             return polygonal
 
     logger.warning(
-        "Não foi possível corrigir geometria inválida. Retornando geometria vazia.",
+        "Could not repair invalid geometry. Returning empty geometry.",
         extra={"repair_strategies": len(strategies)},
     )
     return Polygon()

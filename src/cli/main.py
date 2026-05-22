@@ -10,7 +10,7 @@ from shapely.errors import GEOSException
 
 from src.core.config import AlgorithmConfig, Config
 from src.io.geojson import empty_feature_collection, load_geojsons, save_geojson
-from src.pipeline import generate_catacao_per_talhao
+from src.pipeline import generate_spraying_per_field
 
 logging.basicConfig(
     level=Config.LOG_LEVEL,
@@ -23,51 +23,51 @@ logger = logging.getLogger(__name__)
 def _non_negative_float(value: str) -> float:
     parsed = float(value)
     if parsed < 0:
-        raise argparse.ArgumentTypeError("Valor deve ser >= 0")
+        raise argparse.ArgumentTypeError("Value must be >= 0")
     return parsed
 
 
 def _ratio_zero_one(value: str) -> float:
     parsed = float(value)
     if not 0.0 <= parsed <= 1.0:
-        raise argparse.ArgumentTypeError("Valor deve estar entre 0.0 e 1.0")
+        raise argparse.ArgumentTypeError("Value must be between 0.0 and 1.0")
     return parsed
 
 
 def _min_depth(value: str) -> int:
     parsed = int(value)
     if parsed < 1:
-        raise argparse.ArgumentTypeError("Valor deve ser >= 1")
+        raise argparse.ArgumentTypeError("Value must be >= 1")
     return parsed
 
 
 def _min_sides(value: str) -> int:
     parsed = int(value)
     if parsed < 4:
-        raise argparse.ArgumentTypeError("Valor deve ser >= 4")
+        raise argparse.ArgumentTypeError("Value must be >= 4")
     return parsed
 
 
 def _positive_float(value: str) -> float:
     parsed = float(value)
     if parsed <= 0:
-        raise argparse.ArgumentTypeError("Valor deve ser > 0")
+        raise argparse.ArgumentTypeError("Value must be > 0")
     return parsed
 
 
 def _positive_int(value: str) -> int:
     parsed = int(value)
     if parsed < 1:
-        raise argparse.ArgumentTypeError("Valor deve ser >= 1")
+        raise argparse.ArgumentTypeError("Value must be >= 1")
     return parsed
 
 
 def _parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--daninhas", nargs="+", required=True)
-    parser.add_argument("--talhoes", nargs="+", required=True)
-    parser.add_argument("--obstaculos", nargs="*", default=[])
-    parser.add_argument("--saida", required=True)
+    parser.add_argument("--weeds", nargs="+", required=True)
+    parser.add_argument("--fields", nargs="+", required=True)
+    parser.add_argument("--obstacles", nargs="*", default=[])
+    parser.add_argument("--output", required=True)
     parser.add_argument("--config", type=str)
     parser.add_argument("--weed_buffer_m", type=_non_negative_float)
     parser.add_argument("--merge_distance_m", type=_non_negative_float)
@@ -90,7 +90,6 @@ def _parse_arguments() -> argparse.Namespace:
     parser.add_argument("--alpha_shape_radius_m", type=_positive_float)
     parser.add_argument("--strip_width_m", type=_positive_float)
     parser.add_argument("--strip_fill_threshold", type=_ratio_zero_one)
-    parser.add_argument("--dbscan_min_samples", type=_positive_int)
     parser.add_argument("--working_crs", type=str)
     return parser.parse_args()
 
@@ -102,12 +101,12 @@ def _load_config(config_path: str | None) -> dict:
 
     path = Path(config_path)
     if not path.exists():
-        raise FileNotFoundError(f"Arquivo de config não encontrado: {config_path}")
+        raise FileNotFoundError(f"Configuration file not found: {config_path}")
 
     with open(path, "r", encoding="utf-8") as file_handle:
         user_config = json.load(file_handle)
     if not isinstance(user_config, dict):
-        raise ValueError("Arquivo de config deve conter um objeto JSON.")
+        raise ValueError("Configuration file must contain a JSON object.")
 
     base_config.update(user_config)
     return base_config
@@ -132,7 +131,6 @@ def _apply_cli_overrides(config: dict, args: argparse.Namespace) -> dict:
         "alpha_shape_radius_m",
         "strip_width_m",
         "strip_fill_threshold",
-        "dbscan_min_samples",
         "working_crs",
     ]
 
@@ -147,37 +145,37 @@ def _apply_cli_overrides(config: dict, args: argparse.Namespace) -> dict:
 def main() -> int:
     try:
         args = _parse_arguments()
-        logger.info("Iniciando processamento do worker")
+        logger.info("Starting worker processing")
 
         Config.ensure_directories()
 
-        weeds_geojson = load_geojsons(args.daninhas)
-        talhoes_geojson = load_geojsons(args.talhoes)
+        weeds_geojson = load_geojsons(args.weeds)
+        fields_geojson = load_geojsons(args.fields)
         obstacles_geojson = (
-            load_geojsons(args.obstaculos, allow_missing=True)
-            if args.obstaculos
+            load_geojsons(args.obstacles, allow_missing=True)
+            if args.obstacles
             else empty_feature_collection()
         )
 
-        if not weeds_geojson.get("features") or not talhoes_geojson.get("features"):
-            logger.error("Arquivos de entrada vazios ou inválidos.")
+        if not weeds_geojson.get("features") or not fields_geojson.get("features"):
+            logger.error("Input files are empty or invalid.")
             return 1
 
         algorithm_config = AlgorithmConfig.from_mapping(_apply_cli_overrides(_load_config(args.config), args))
 
-        result_geojson = generate_catacao_per_talhao(
+        result_geojson = generate_spraying_per_field(
             weeds_geojson=weeds_geojson,
             obstacles_geojson=obstacles_geojson,
-            talhoes_geojson=talhoes_geojson,
+            fields_geojson=fields_geojson,
             config=algorithm_config,
         )
 
-        save_geojson(result_geojson, args.saida)
-        logger.info("Processamento concluído com sucesso. Salvo em: %s", args.saida)
+        save_geojson(result_geojson, args.output)
+        logger.info("Processing completed successfully. Saved to: %s", args.output)
         return 0
 
     except (FileNotFoundError, ValueError, json.JSONDecodeError, OSError, GEOSException) as exc:
-        logger.error("Erro no processamento: %s", exc, exc_info=True)
+        logger.error("Processing error: %s", exc, exc_info=True)
         return 1
 
 

@@ -152,9 +152,9 @@ def alpha_shape_from_polygons(
         return ensure_polygonal(make_valid_if_needed(hull, fix_invalid=fix_invalid))
 
     alpha_geom = make_valid_if_needed(unary_union(kept_triangles), fix_invalid=fix_invalid)
-    
+
     # Ensure the alpha shape always covers the original polygons
     alpha_geom = unary_union([alpha_geom, dissolved])
     alpha_geom = make_valid_if_needed(alpha_geom, fix_invalid=fix_invalid)
-    
+
     return ensure_polygonal(alpha_geom)

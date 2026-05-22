@@ -8,14 +8,12 @@ from typing import Any, Mapping
 SUPPORTED_COVERAGE_METHODS = {
     "mrr",
     "bcd",
-    "bp-mops",
     "fixed-grid",
     "quadtree",
     "convex-hull",
     "concave-hull",
     "aabb",
     "morph-closing",
-    "dbscan-buffer",
     "strip-based",
 }
 
@@ -25,7 +23,6 @@ COVERAGE_METHOD_ALIASES: dict[str, str] = {
     "rotated-rectangle": "mrr",
     "boustrophedon": "bcd",
     "boustrophedon-cellular": "bcd",
-    "bpmops": "bp-mops",
     "grid": "fixed-grid",
     "grid-fixed": "fixed-grid",
     "chessboard": "fixed-grid",
@@ -39,8 +36,6 @@ COVERAGE_METHOD_ALIASES: dict[str, str] = {
     "axis-aligned-bounding-box": "aabb",
     "morphological-closing": "morph-closing",
     "closing": "morph-closing",
-    "dbscan": "dbscan-buffer",
-    "dbscan-buffer-dissolve": "dbscan-buffer",
     "swath-aligned": "strip-based",
     "strip-based-merging": "strip-based",
     "1d-striping": "strip-based",
@@ -55,9 +50,9 @@ def normalize_coverage_method(raw_value: object | None) -> str:
     normalized = COVERAGE_METHOD_ALIASES.get(normalized, normalized)
     if normalized not in SUPPORTED_COVERAGE_METHODS:
         raise ValueError(
-            "Método de cobertura inválido: "
-            f"{raw_value!r}. Use mrr, bcd, bp-mops, fixed-grid, quadtree, "
-            "convex-hull, concave-hull, aabb, morph-closing, dbscan-buffer ou strip-based."
+            "Invalid coverage method: "
+            f"{raw_value!r}. Use mrr, bcd, fixed-grid, quadtree, "
+            "convex-hull, concave-hull, aabb, morph-closing or strip-based."
         )
     return normalized
 
@@ -81,7 +76,6 @@ class AlgorithmConfig:
     alpha_shape_radius_m: float = 20.0
     strip_width_m: float = 3.0
     strip_fill_threshold: float = 0.30
-    dbscan_min_samples: int = 2
     working_crs: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
@@ -112,7 +106,9 @@ class AlgorithmConfig:
         config.validate()
         return config
 
-    def with_overrides(self, overrides: Mapping[str, Any] | None = None, **kwargs: Any) -> AlgorithmConfig:
+    def with_overrides(
+        self, overrides: Mapping[str, Any] | None = None, **kwargs: Any
+    ) -> AlgorithmConfig:
         merged: dict[str, Any] = {}
         if overrides:
             merged.update(overrides)
@@ -127,7 +123,9 @@ class AlgorithmConfig:
             normalized_values[key] = value
 
         if "coverage_method" in normalized_values:
-            normalized_values["coverage_method"] = normalize_coverage_method(normalized_values["coverage_method"])
+            normalized_values["coverage_method"] = normalize_coverage_method(
+                normalized_values["coverage_method"]
+            )
 
         updated = replace(self, **normalized_values)
         updated.validate()
@@ -153,16 +151,14 @@ class AlgorithmConfig:
         for key, (min_value, max_value) in numeric_ranges.items():
             value = float(getattr(self, key))
             if value < min_value:
-                raise ValueError(f"Parâmetro inválido ({key}): valor deve ser >= {min_value}")
+                raise ValueError(f"Invalid parameter ({key}): value must be >= {min_value}")
             if max_value is not None and value > max_value:
-                raise ValueError(f"Parâmetro inválido ({key}): valor deve ser <= {max_value}")
+                raise ValueError(f"Invalid parameter ({key}): value must be <= {max_value}")
 
         if int(self.rectangle_max_depth) < 1:
-            raise ValueError("Parâmetro inválido (rectangle_max_depth): valor deve ser >= 1")
+            raise ValueError("Invalid parameter (rectangle_max_depth): value must be >= 1")
         if int(self.max_polygon_sides) < 4:
-            raise ValueError("Parâmetro inválido (max_polygon_sides): valor deve ser >= 4")
-        if int(self.dbscan_min_samples) < 1:
-            raise ValueError("Parâmetro inválido (dbscan_min_samples): valor deve ser >= 1")
+            raise ValueError("Invalid parameter (max_polygon_sides): value must be >= 4")
 
         normalize_coverage_method(self.coverage_method)
 

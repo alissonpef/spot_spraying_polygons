@@ -29,7 +29,6 @@ SMALL_PRIMITIVE_METHODS = {
     "bcd",
     "fixed-grid",
     "quadtree",
-    "dbscan-buffer",
     "strip-based",
     "morph-closing",
 }
@@ -45,16 +44,16 @@ def _buffer_quad_segs_from_config(config: AlgorithmConfig) -> int:
     return max(1, math.ceil(config.max_polygon_sides / 4))
 
 
-def generate_spray_geometry_for_talhao(
+def generate_spray_geometry_for_field(
     weeds_metric: Sequence[Polygon],
     obstacles_metric: Sequence[Polygon],
-    talhao_poly: Polygon,
+    field_poly: Polygon,
     config: AlgorithmConfig | Mapping[str, object],
 ) -> PolygonalGeometry:
     algorithm_config = _coerce_config(config)
     local_weeds = clip_polygons_to_boundary(
         weeds_metric,
-        talhao_poly,
+        field_poly,
         fix_invalid=algorithm_config.fix_invalid_geometries,
     )
     if not local_weeds:
@@ -64,7 +63,7 @@ def generate_spray_geometry_for_talhao(
     buffer_quad_segs = _buffer_quad_segs_from_config(algorithm_config)
 
     logger.info(
-        "  Talhão: %d daninhas internas, buffer=%.1fm, merge=%.1fm, método=%s",
+        "  Field: %d internal weeds, buffer=%.1fm, merge=%.1fm, method=%s",
         len(local_weeds),
         algorithm_config.weed_buffer_m,
         algorithm_config.merge_distance_m,
@@ -86,22 +85,22 @@ def generate_spray_geometry_for_talhao(
     return _build_safe_geometry(
         buffered_weeds,
         obstacles_metric,
-        talhao_poly,
+        field_poly,
         algorithm_config,
         buffer_quad_segs=buffer_quad_segs,
     )
 
 
-def generate_spray_rectangles_for_talhao(
+def generate_spray_rectangles_for_field(
     weeds_metric: Sequence[Polygon],
     obstacles_metric: Sequence[Polygon],
-    talhao_poly: Polygon,
+    field_poly: Polygon,
     config: AlgorithmConfig | Mapping[str, object],
 ) -> PolygonalGeometry:
-    return generate_spray_geometry_for_talhao(
+    return generate_spray_geometry_for_field(
         weeds_metric=weeds_metric,
         obstacles_metric=obstacles_metric,
-        talhao_poly=talhao_poly,
+        field_poly=field_poly,
         config=config,
     )
 
@@ -109,7 +108,7 @@ def generate_spray_rectangles_for_talhao(
 def _build_safe_geometry(
     buffered_weeds: Sequence[Polygon],
     obstacles_metric: Sequence[Polygon],
-    talhao_poly: Polygon,
+    field_poly: Polygon,
     config: AlgorithmConfig,
     *,
     buffer_quad_segs: int,
@@ -121,9 +120,11 @@ def _build_safe_geometry(
         buffer_quad_segs=buffer_quad_segs,
     )
     coverage_method = config.normalized_coverage_method
-    logger.info("  %d grupo(s) formado(s) (método=%s)", len(grouped_weeds), coverage_method)
+    logger.info("  %d group(s) formed (method=%s)", len(grouped_weeds), coverage_method)
 
-    relevant_obstacles = [obstacle for obstacle in obstacles_metric if talhao_poly.intersects(obstacle)]
+    relevant_obstacles = [
+        obstacle for obstacle in obstacles_metric if field_poly.intersects(obstacle)
+    ]
     obstacle_union = _build_obstacle_union(
         relevant_obstacles,
         buffer_m=config.obstacle_safety_buffer_m,
@@ -133,9 +134,7 @@ def _build_safe_geometry(
 
     raw_geometries: list[Polygon] = []
     primitive_min_area_m2 = (
-        0.0
-        if coverage_method in SMALL_PRIMITIVE_METHODS or coverage_method == "bp-mops"
-        else config.min_polygon_area_m2
+        0.0 if coverage_method in SMALL_PRIMITIVE_METHODS else config.min_polygon_area_m2
     )
 
     for weed_group in grouped_weeds:
@@ -173,7 +172,7 @@ def _build_safe_geometry(
 
             clipped = ensure_polygonal(
                 make_valid_if_needed(
-                    candidate.intersection(talhao_poly),
+                    candidate.intersection(field_poly),
                     fix_invalid=config.fix_invalid_geometries,
                 )
             )
@@ -185,37 +184,14 @@ def _build_safe_geometry(
                     continue
                 raw_geometries.append(polygon)
 
-    if coverage_method == "bp-mops":
-        return _merge_circle_footprints(raw_geometries, fix_invalid=config.fix_invalid_geometries)
-
-    final_min_area_m2 = 0.0 if coverage_method in SMALL_PRIMITIVE_METHODS else config.min_polygon_area_m2
+    final_min_area_m2 = (
+        0.0 if coverage_method in SMALL_PRIMITIVE_METHODS else config.min_polygon_area_m2
+    )
     return _resolve_overlapping_geometries(
         raw_geometries,
         fix_invalid=config.fix_invalid_geometries,
         min_polygon_area_m2=final_min_area_m2,
     )
-
-
-def _merge_circle_footprints(
-    polygons: Sequence[Polygon],
-    *,
-    fix_invalid: bool,
-) -> PolygonalGeometry:
-    if not polygons:
-        return Polygon()
-
-    dissolved = ensure_polygonal(
-        make_valid_if_needed(
-            unary_union(polygons),
-            fix_invalid=fix_invalid,
-        )
-    )
-    footprints = [polygon for polygon in to_polygon_list(dissolved) if not polygon.is_empty and polygon.area > 0.01]
-    if not footprints:
-        return Polygon()
-    if len(footprints) == 1:
-        return footprints[0]
-    return MultiPolygon(footprints)
 
 
 def _build_obstacle_union(
@@ -286,13 +262,17 @@ def _resolve_overlapping_geometries(
         if not covered_batch and covered.is_empty:
             trimmed = polygon
         else:
-            trimmed_geometry: BaseGeometry = polygon.difference(covered) if not covered.is_empty else polygon
+            trimmed_geometry: BaseGeometry = (
+                polygon.difference(covered) if not covered.is_empty else polygon
+            )
             for pending in covered_batch:
                 if trimmed_geometry.is_empty:
                     break
                 if pending.intersects(trimmed_geometry):
                     trimmed_geometry = trimmed_geometry.difference(pending)
-            trimmed = ensure_polygonal(make_valid_if_needed(trimmed_geometry, fix_invalid=fix_invalid))
+            trimmed = ensure_polygonal(
+                make_valid_if_needed(trimmed_geometry, fix_invalid=fix_invalid)
+            )
 
         for piece in to_polygon_list(trimmed):
             if piece.is_empty or piece.area <= 0.01:

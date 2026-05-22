@@ -8,10 +8,8 @@ from shapely.geometry import Polygon
 from src.algorithms.coverage import (
     AabbCoverageStrategy,
     BoustrophedonCoverageStrategy,
-    BpMopsCoverageStrategy,
     ConcaveHullCoverageStrategy,
     ConvexHullCoverageStrategy,
-    DbscanBufferCoverageStrategy,
     FixedGridCoverageStrategy,
     MorphClosingCoverageStrategy,
     MrrCoverageStrategy,
@@ -26,14 +24,12 @@ _STRATEGIES: dict[str, CoverageStrategy] = {
     for strategy in (
         MrrCoverageStrategy(),
         BoustrophedonCoverageStrategy(),
-        BpMopsCoverageStrategy(),
         FixedGridCoverageStrategy(),
         QuadtreeCoverageStrategy(),
         ConvexHullCoverageStrategy(),
         ConcaveHullCoverageStrategy(),
         AabbCoverageStrategy(),
         MorphClosingCoverageStrategy(),
-        DbscanBufferCoverageStrategy(),
         StripBasedCoverageStrategy(),
     )
 }
@@ -60,7 +56,7 @@ def get_coverage_strategy(method_name: str) -> CoverageStrategy:
     try:
         return _STRATEGIES[normalized]
     except KeyError as exc:
-        raise ValueError(f"Método de cobertura não suportado: {method_name}") from exc
+        raise ValueError(f"Unsupported coverage method: {method_name}") from exc
 
 
 def split_into_optimized_rectangles(

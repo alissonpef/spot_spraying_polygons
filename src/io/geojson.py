@@ -21,7 +21,7 @@ def is_valid_feature_collection(data: Any) -> bool:
 def load_geojson(file_path: str | Path) -> dict:
     path = Path(file_path)
     if not path.is_file():
-        raise FileNotFoundError(f"Arquivo não encontrado: {file_path}")
+        raise FileNotFoundError(f"File not found: {file_path}")
     with open(path, "r", encoding="utf-8") as file_handle:
         return json.load(file_handle)
 
@@ -54,14 +54,14 @@ def load_geojsons(file_paths: list[str | Path], allow_missing: bool = False) -> 
             data = load_geojson(file_path)
         except FileNotFoundError:
             if allow_missing:
-                logger.warning("Arquivo não encontrado: %s. Ignorando.", file_path)
+                logger.warning("File not found: %s. Ignoring.", file_path)
                 continue
             raise
         except json.JSONDecodeError as exc:
-            raise ValueError(f"Arquivo {file_path} não é um JSON válido.") from exc
+            raise ValueError(f"File {file_path} is not a valid JSON.") from exc
 
         if not is_valid_feature_collection(data):
-            logger.warning("Arquivo sem FeatureCollection válida. Ignorando: %s", file_path)
+            logger.warning("File does not contain a valid FeatureCollection. Ignoring: %s", file_path)
             continue
 
         has_any_valid = True

@@ -19,7 +19,9 @@ class FixedGridCoverageStrategy(CoverageStrategy):
 
     def generate(self, polygons: Sequence[Polygon], context: CoverageContext) -> list[Polygon]:
         union = dissolve_polygons(polygons, fix_invalid=context.config.fix_invalid_geometries)
-        valid_union = ensure_polygonal(make_valid_if_needed(union, fix_invalid=context.config.fix_invalid_geometries))
+        valid_union = ensure_polygonal(
+            make_valid_if_needed(union, fix_invalid=context.config.fix_invalid_geometries)
+        )
         if valid_union.is_empty:
             return []
 
@@ -47,5 +49,7 @@ class FixedGridCoverageStrategy(CoverageStrategy):
         if not selected_cells:
             return []
 
-        dissolved = dissolve_polygons(selected_cells, fix_invalid=context.config.fix_invalid_geometries)
+        dissolved = dissolve_polygons(
+            selected_cells, fix_invalid=context.config.fix_invalid_geometries
+        )
         return to_polygon_list(dissolved)
