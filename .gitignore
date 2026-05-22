@@ -11,31 +11,8 @@ env/
 ENV/
 
 # Tooling
-.pytest_cache/
-.mypy_cache/
-.cache/
-pip-wheel-metadata/
-htmlcov/
-
-# Packaging
-build/
-dist/
-*.egg-info/
-
-# Environment
-.env
-.env.*
-
-# IDEs
-.vscode/
-.idea/
-
-# macOS
-.DS_Store
-
-# Jupyter
-.ipynb_checkpoints/
 .venv/
-data/output/
 __pycache__/
+data/output/
+data/input/likert_evaluations.csv
 
