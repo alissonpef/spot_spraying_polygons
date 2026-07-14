@@ -1,18 +1,16 @@
-# Byte-compiled / distribution
+# Python build artifacts and cache
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
 
-# Virtual environments
+# Virtual environment
 .venv/
-venv/
-env/
-ENV/
 
-# Tooling
-.venv/
-__pycache__/
+# Environment variables / secrets
+.env
+
+# Tooling cache
+.ruff_cache/
+
+# Local data outputs and user overrides
 data/output/
 data/input/likert_evaluations.csv
-
