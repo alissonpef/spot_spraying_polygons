@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/alissonpef/Spot-Spraying-Polygons">
+  <a href="https://github.com/alissonpef/spot_spraying_polygons">
     <img src="assets/logo.png" alt="Logo" width="120" height="120">
   </a>
 
@@ -21,12 +21,12 @@
   <p align="center">
     Automatic generation of georeferenced spraying polygons for localized weed management in precision agriculture.
     <br />
-    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/alissonpef/spot_spraying_polygons"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/issues/new?labels=bug">Report Bug</a>
+    <a href="https://github.com/alissonpef/spot_spraying_polygons/issues/new?labels=bug">Report Bug</a>
     &middot;
-    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/issues/new?labels=enhancement">Request Feature</a>
+    <a href="https://github.com/alissonpef/spot_spraying_polygons/issues/new?labels=enhancement">Request Feature</a>
   </p>
 </div>
 
@@ -106,8 +106,8 @@ This project requires Python 3.11 or later. We highly recommend using the **uv**
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/alissonpef/Spot-Spraying-Polygons.git
-   cd Spot-Spraying-Polygons
+   git clone https://github.com/alissonpef/spot_spraying_polygons.git
+   cd spot_spraying_polygons
    ```
 2. Install dependencies and create a virtual environment with **uv**:
    ```sh
@@ -183,8 +183,8 @@ If you have a suggestion that would make this better, please fork the repository
 
 ### Top Contributors:
 
-<a href="https://github.com/alissonpef/Spot-Spraying-Polygons/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=alissonpef/Spot-Spraying-Polygons" alt="contrib.rocks image" />
+<a href="https://github.com/alissonpef/spot_spraying_polygons/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=alissonpef/spot_spraying_polygons" alt="contrib.rocks image" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -203,7 +203,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 Alisson Pereira Ferreira - alissonpef@gmail.com - [LinkedIn](https://www.linkedin.com/in/alisson-pereira-ferreira/)
 
-Project Link: [https://github.com/alissonpef/Spot-Spraying-Polygons](https://github.com/alissonpef/Spot-Spraying-Polygons)
+Project Link: [https://github.com/alissonpef/spot_spraying_polygons](https://github.com/alissonpef/spot_spraying_polygons)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,16 +212,16 @@ Project Link: [https://github.com/alissonpef/Spot-Spraying-Polygons](https://git
 Made with ❤️ by **Alisson Pereira**.
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/alissonpef/Spot-Spraying-Polygons.svg?style=for-the-badge
-[contributors-url]: https://github.com/alissonpef/Spot-Spraying-Polygons/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alissonpef/Spot-Spraying-Polygons.svg?style=for-the-badge
-[forks-url]: https://github.com/alissonpef/Spot-Spraying-Polygons/network/members
-[stars-shield]: https://img.shields.io/github/stars/alissonpef/Spot-Spraying-Polygons.svg?style=for-the-badge
-[stars-url]: https://github.com/alissonpef/Spot-Spraying-Polygons/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alissonpef/Spot-Spraying-Polygons.svg?style=for-the-badge
-[issues-url]: https://github.com/alissonpef/Spot-Spraying-Polygons/issues
-[license-shield]: https://img.shields.io/github/license/alissonpef/Spot-Spraying-Polygons.svg?style=for-the-badge
-[license-url]: https://github.com/alissonpef/Spot-Spraying-Polygons/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/alissonpef/spot_spraying_polygons.svg?style=for-the-badge
+[contributors-url]: https://github.com/alissonpef/spot_spraying_polygons/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alissonpef/spot_spraying_polygons.svg?style=for-the-badge
+[forks-url]: https://github.com/alissonpef/spot_spraying_polygons/network/members
+[stars-shield]: https://img.shields.io/github/stars/alissonpef/spot_spraying_polygons.svg?style=for-the-badge
+[stars-url]: https://github.com/alissonpef/spot_spraying_polygons/stargazers
+[issues-shield]: https://img.shields.io/github/issues/alissonpef/spot_spraying_polygons.svg?style=for-the-badge
+[issues-url]: https://github.com/alissonpef/spot_spraying_polygons/issues
+[license-shield]: https://img.shields.io/github/license/alissonpef/spot_spraying_polygons.svg?style=for-the-badge
+[license-url]: https://github.com/alissonpef/spot_spraying_polygons/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alisson-pereira-ferreira/
 

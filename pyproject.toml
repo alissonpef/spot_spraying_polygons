@@ -1,5 +1,5 @@
 [project]
-name = "spot-spraying-polygons"
+name = "spot_spraying_polygons"
 version = "1.0.0"
 description = "Automatic generation of spot-spraying polygons for localized weed management"
 readme = "README.md"
