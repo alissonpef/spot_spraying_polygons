@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-<!-- ESCUDOS DO PROJETO -->
+<!-- PROJECT SHIELDS -->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -9,7 +9,7 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- LOGOTIPO DO PROJETO -->
+<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/alissonpef/Spot-Spraying-Polygons">
@@ -19,62 +19,62 @@
   <h3 align="center">Spot Spraying Polygons</h3>
 
   <p align="center">
-    Geração automática de polígonos de pulverização georreferenciados para o manejo localizado de plantas daninhas na agricultura de precisão.
+    Automatic generation of georeferenced spraying polygons for localized weed management in precision agriculture.
     <br />
-    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons"><strong>Explore a documentação »</strong></a>
+    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/issues/new?labels=bug">Reportar Bug</a>
+    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/issues/new?labels=bug">Report Bug</a>
     &middot;
-    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/issues/new?labels=enhancement">Solicitar Recurso</a>
+    <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/issues/new?labels=enhancement">Request Feature</a>
   </p>
 </div>
 
-<!-- ÍNDICE -->
+<!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Índice</summary>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#sobre-o-projeto">Sobre O Projeto</a>
+      <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#construído-com">Construído Com</a></li>
+        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#começando">Começando</a>
+      <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
-        <li><a href="#instalação">Instalação</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#uso">Uso</a></li>
-    <li><a href="#contribuindo">Contribuindo</a></li>
-    <li><a href="#licença">Licença</a></li>
-    <li><a href="#contato">Contato</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
-<!-- SOBRE O PROJETO -->
+<!-- ABOUT THE PROJECT -->
 
-## Sobre O Projeto
+## About The Project
 
-O **Spot Spraying Polygons** é uma ferramenta desenvolvida para resolver um problema crucial na agricultura moderna: o desperdício de defensivos agrícolas. A aplicação de produtos químicos em área total de forma indiscriminada gera prejuízos financeiros e ambientais. Esta ferramenta permite converter mapas de detecção georreferenciada de plantas invasoras em mapas de prescrição precisos, minimizando a área de aplicação.
+**Spot Spraying Polygons** is a tool designed to solve a crucial problem in modern agriculture: chemical product waste. Indiscriminate broadcast spraying generates financial loss and environmental damage. This tool converts georeferenced weed detection datasets into precise prescription maps, minimizing the treated area.
 
-O pipeline de processamento consiste em:
-- **Projeção UTM automática**: Reprojeta as coordenadas geográficas (WGS84) para um sistema métrico (UTM) local, otimizando as medições reais em metros.
-- **Buffer e Agrupamento (Clustering)**: Expande a área de cada planta invasora com base em uma margem de segurança configurável e agrupa manchas próximas para formar polígonos de tratamento coerentes.
-- **9 Algoritmos de Cobertura**: Oferece estratégias geométricas inteligentes (como *Minimum Rotated Rectangle*, *Boustrophedon Cellular Decomposition*, *Fixed Grid*, *Quadtree*, *Strips*, entre outras) para se adaptar a diferentes formatos de talhões e tipos de aplicação.
-- **Evasão de Obstáculos**: Permite informar áreas que não devem ser pulverizadas (árvores, construções, etc.), subtraindo-as com margens de segurança específicas.
-- **Exportação Universal**: Exporta os mapas resultantes no formato padrão GeoJSON, amplamente compatível com drones agrícolas e controladores de pulverização.
-- **Roteamento de Linhas e Métricas**: Gera linhas de pulverização no padrão zigue-zague com algoritmos de caminhos mínimos (Dijkstra) para conectar as passadas, além de fornecer um relatório completo de eficiência (IoU, curvas, área desperdiçada).
+The processing pipeline includes:
+- **Automatic UTM Projection**: Reprojects geographic coordinates (WGS84) to a local projected metric system (UTM), optimizing real-world measurements in meters.
+- **Buffer & Clustering**: Expands the area of each weed detection based on a configurable safety margin and groups nearby spots to form coherent treatment patches.
+- **9 Coverage Algorithms**: Offers smart geometric strategies (such as *Minimum Rotated Rectangle*, *Boustrophedon Cellular Decomposition*, *Fixed Grid*, *Quadtree*, *Strips*, among others) to adapt to different field shapes and application constraints.
+- **Obstacle Avoidance**: Subtracts non-spray zones (trees, power lines, water bodies) with specific safety margins.
+- **Universal Export**: Exports prescription maps in standard GeoJSON format, compatible with agricultural drones and sprayer controllers.
+- **Line Routing & Metrics**: Generates zigzag spraying lines using shortest-path algorithms (Dijkstra) to connect passes, and provides a full efficiency report (IoU, turns, overspray waste).
 
-O projeto acompanha tanto uma interface de linha de comando (CLI) quanto um painel web interativo (Streamlit) para visualização geográfica das etapas.
+The project includes a command-line interface (CLI) and an interactive web dashboard (Streamlit) for spatial step-by-step visualization.
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Construído Com
+### Built With
 
-Esta seção lista as principais tecnologias, linguagens e bibliotecas que dão suporte ao projeto.
+This section lists the main technologies, languages, and libraries that power the project.
 
 * [![Python][Python-shield]][Python-url]
 * [![Shapely][Shapely-shield]][Shapely-url]
@@ -85,35 +85,35 @@ Esta seção lista as principais tecnologias, linguagens e bibliotecas que dão 
 * [![SciPy][SciPy-shield]][SciPy-url]
 * [![Pandas][Pandas-shield]][Pandas-url]
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- COMEÇANDO -->
+<!-- GETTING STARTED -->
 
-## Começando
+## Getting Started
 
-Para rodar o projeto localmente em seu ambiente de desenvolvimento, siga os passos abaixo.
+To get a local copy up and running, follow these simple steps.
 
-### Pré-requisitos
+### Prerequisites
 
-Este projeto exige Python 3.11 ou superior. Recomendamos a utilização do gerenciador de pacotes **uv** para uma instalação extremamente rápida e isolada.
+This project requires Python 3.11 or later. We highly recommend using the **uv** package manager for an extremely fast and isolated installation.
 
-- Instalar o **uv** (caso ainda não possua):
+- Install **uv** (if you don't have it yet):
   ```sh
   pip install uv
   ```
 
-### Instalação
+### Installation
 
-1. Clone o repositório:
+1. Clone the repository:
    ```sh
    git clone https://github.com/alissonpef/Spot-Spraying-Polygons.git
    cd Spot-Spraying-Polygons
    ```
-2. Instale as dependências e crie o ambiente virtual com o **uv**:
+2. Install dependencies and create a virtual environment with **uv**:
    ```sh
    uv sync
    ```
-3. Ative o ambiente virtual:
+3. Activate the virtual environment:
    - **Linux/macOS**:
      ```sh
      source .venv/bin/activate
@@ -123,27 +123,27 @@ Este projeto exige Python 3.11 ou superior. Recomendamos a utilização do geren
      .venv\Scripts\activate
      ```
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- EXEMPLOS DE USO -->
+<!-- USAGE EXAMPLES -->
 
-## Uso
+## Usage
 
-O projeto oferece suporte para execução visual ou via terminal.
+The project supports both visual execution and terminal execution.
 
-### Painel Interativo (Streamlit)
+### Interactive Dashboard (Streamlit)
 
-Para iniciar o painel de visualização web no navegador:
+To launch the web visualization interface in your browser:
 ```sh
 uv run streamlit run src/ui/app.py
 ```
-*(ou utilize o atalho configurado `uv run ui`)*
+*(or use the shortcut `uv run ui`)*
 
-Na interface você poderá arrastar seus próprios arquivos GeoJSON ou usar as amostras salvas na pasta `data/`, ajustar os parâmetros geométricos em tempo real, remover polígonos indesejados diretamente no mapa e fazer o download do GeoJSON final pronto.
+In the dashboard, you can upload your own GeoJSON files or use the samples located in the `data/` folder, adjust geometric parameters in real time, remove unwanted polygons directly on the map, and download the final GeoJSON.
 
-### Linha de Comando (CLI)
+### Command-Line Interface (CLI)
 
-1. **Geração de Polígonos**:
+1. **Polygon Generation**:
    ```sh
    uv run spot-spray \
      --weeds data/input/weed1.geojson data/input/weed2.geojson \
@@ -155,57 +155,57 @@ Na interface você poderá arrastar seus próprios arquivos GeoJSON ou usar as a
      --merge_distance_m 8.0
    ```
 
-2. **Geração de Linhas de Pulverização**:
+2. **Spraying Line Generation**:
    ```sh
    uv run spraying-lines data/output/spraying-mrr.geojson 2.0 0.0 --output-dir data/output/lines
    ```
 
-3. **Execução de Métricas**:
+3. **Run Metrics Suite**:
    ```sh
    uv run metrics
    ```
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUINDO -->
+<!-- CONTRIBUTING -->
 
-## Contribuindo
+## Contributing
 
-Contribuições são o que tornam a comunidade open source um lugar tão incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será **muito apreciada**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Se você tiver alguma sugestão para melhorar o projeto, sinta-se à vontade para fazer o fork do repositório e abrir um Pull Request, ou criar uma issue com a tag "enhancement".
+If you have a suggestion that would make this better, please fork the repository and create a pull request. You can also simply open an issue with the tag "enhancement".
 
-1. Faça o Fork do Projeto
-2. Crie a sua Branch de Funcionalidade (`git checkout -b feature/FuncionalidadeIncrivel`)
-3. Commit suas Mudanças (`git commit -m 'Adicione alguma FuncionalidadeIncrivel'`)
-4. Faça o Push para a Branch (`git push origin feature/FuncionalidadeIncrivel`)
-5. Abra um Pull Request
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Principais contribuidores:
+### Top Contributors:
 
 <a href="https://github.com/alissonpef/Spot-Spraying-Polygons/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=alissonpef/Spot-Spraying-Polygons" alt="imagem contrib.rocks" />
+  <img src="https://contrib.rocks/image?repo=alissonpef/Spot-Spraying-Polygons" alt="contrib.rocks image" />
 </a>
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENÇA -->
+<!-- LICENSE -->
 
-## Licença
+## License
 
-Distribuído sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais informações.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTATO -->
+<!-- CONTACT -->
 
-## Contrato
+## Contact
 
 Alisson Pereira Ferreira - alissonpef@gmail.com - [LinkedIn](https://www.linkedin.com/in/alisson-pereira-ferreira/)
 
-Link do Projeto: [https://github.com/alissonpef/Spot-Spraying-Polygons](https://github.com/alissonpef/Spot-Spraying-Polygons)
+Project Link: [https://github.com/alissonpef/Spot-Spraying-Polygons](https://github.com/alissonpef/Spot-Spraying-Polygons)
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
