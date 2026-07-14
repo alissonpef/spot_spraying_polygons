@@ -11,15 +11,21 @@ def count_weeds_per_field(
     weeds_metric: list[Polygon],
     fields_metric: list[Polygon],
 ) -> list[int]:
+
     if not weeds_metric:
         return [0] * len(fields_metric)
 
     tree = STRtree(weeds_metric)
+
     counts: list[int] = []
+
     for field in fields_metric:
         prepared_field = prep(field)
+
         idxs = query_tree_indices(tree, field)
+
         counts.append(sum(1 for i in idxs if prepared_field.intersects(weeds_metric[i])))
+
     return counts
 
 
@@ -28,16 +34,22 @@ def get_field_info(
     fields_geojson: dict,
     config: dict | None = None,
 ) -> list[dict]:
+
     t2m, t2w = prepare_projection(weeds_geojson, config)
 
     weeds_m = extract_and_transform(weeds_geojson, t2m)
+
     fields_m = extract_and_transform(fields_geojson, t2m)
+
     weed_counts = count_weeds_per_field(weeds_m, fields_m)
 
     info: list[dict] = []
-    for i, (field, weed_count) in enumerate(zip(fields_m, weed_counts)):
+
+    for i, (field, weed_count) in enumerate(zip(fields_m, weed_counts, strict=False)):
         centroid_m = field.centroid
+
         cx, cy = t2w.transform(centroid_m.x, centroid_m.y)
+
         info.append(
             {
                 "id": i,

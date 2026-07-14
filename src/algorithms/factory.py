@@ -41,9 +41,12 @@ def build_coverage_context(
     buffer_quad_segs: int | None = None,
     min_polygons_to_split: int = 2,
 ) -> CoverageContext:
+
     effective_buffer_quad_segs = buffer_quad_segs
+
     if effective_buffer_quad_segs is None:
         effective_buffer_quad_segs = max(1, math.ceil(config.max_polygon_sides / 4))
+
     return CoverageContext(
         config=config,
         buffer_quad_segs=effective_buffer_quad_segs,
@@ -52,9 +55,12 @@ def build_coverage_context(
 
 
 def get_coverage_strategy(method_name: str) -> CoverageStrategy:
+
     normalized = normalize_coverage_method(method_name)
+
     try:
         return _STRATEGIES[normalized]
+
     except KeyError as exc:
         raise ValueError(f"Unsupported coverage method: {method_name}") from exc
 
@@ -66,10 +72,13 @@ def split_into_optimized_rectangles(
     buffer_quad_segs: int | None = None,
     min_polygons_to_split: int = 2,
 ) -> list[Polygon]:
+
     strategy = get_coverage_strategy(config.coverage_method)
+
     context = build_coverage_context(
         config,
         buffer_quad_segs=buffer_quad_segs,
         min_polygons_to_split=min_polygons_to_split,
     )
+
     return strategy.generate(polygons, context)

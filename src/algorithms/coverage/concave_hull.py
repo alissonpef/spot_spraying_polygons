@@ -13,6 +13,7 @@ class ConcaveHullCoverageStrategy(CoverageStrategy):
     method_name = "concave-hull"
 
     def generate(self, polygons: Sequence[Polygon], context: CoverageContext) -> list[Polygon]:
+
         return to_polygon_list(
             alpha_shape_from_polygons(
                 polygons,

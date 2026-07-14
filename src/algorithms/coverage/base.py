@@ -12,7 +12,9 @@ from src.core.config import AlgorithmConfig
 @dataclass(frozen=True, slots=True)
 class CoverageContext:
     config: AlgorithmConfig
+
     buffer_quad_segs: int
+
     min_polygons_to_split: int = 2
 
 
@@ -21,4 +23,5 @@ class CoverageStrategy(ABC):
 
     @abstractmethod
     def generate(self, polygons: Sequence[Polygon], context: CoverageContext) -> list[Polygon]:
+
         raise NotImplementedError

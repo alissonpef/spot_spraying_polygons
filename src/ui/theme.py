@@ -2,6 +2,7 @@ import streamlit as st
 
 MAP_SIZES = {"Normal": 650, "Large": 850, "Maximum": 1080}
 
+
 FIELD_COLORS = [
     "#5fa8a3",
     "#6fb08f",
@@ -19,6 +20,7 @@ FIELD_COLORS = [
     "#7da996",
     "#8fa5cb",
 ]
+
 
 GLOBAL_STYLES = """
 <style>
@@ -144,6 +146,7 @@ input[type="number"]:focus, input[type="text"]:focus {
 </style>
 """
 
+
 MAP_CSS = """
 <style>
     .leaflet-top.leaflet-left { top: 16px !important; }
@@ -156,6 +159,7 @@ MAP_CSS = """
     .recenter-control a.recenter-btn:hover { background: #f4f4f4; }
 </style>
 """
+
 
 MAP_JS_TEMPLATE = """
 <script>
@@ -235,6 +239,7 @@ MAP_JS_TEMPLATE = """
 
 
 def render_sidebar_header():
+
     st.markdown(
         """
         <div style="text-align: left; padding: 0.75rem 0;">
